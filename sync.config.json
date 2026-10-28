@@ -1,0 +1,26 @@
+{
+  "$comment": "DSH-side policy for the opencode -> DSH translation. This is the layer the generated cordis.patch.yml deliberately does NOT derive from opencode.",
+
+  "exclude": [],
+
+  "disabled": {
+    "asana": "opencode uses OAuth; dsh-mcp-client has no OAuth support",
+    "sentry": "deliberate: kept disabled until reviewed",
+    "postman": "deliberate: kept disabled until reviewed",
+    "sendgrid": "deliberate: kept disabled until reviewed"
+  },
+
+  "failOnStartupError": ["context7"],
+
+  "extra": {
+    "solidcraft": {
+      "cwd": "/home/sal/Documents/SolidCraft"
+    }
+  },
+
+  "comments": {
+    "solidcraft": "opencode entry is [solidcraft-cli, mcp, --allow-any-path]. --allow-any-path lifts the one-DIR limit that silently dropped the second path in the old --allow-path form. cwd is a DSH-side addition, not in opencode."
+  },
+
+  "portableHome": true
+}

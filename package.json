@@ -1,0 +1,38 @@
+{
+  "name": "dsh-opencode-mcp-parity",
+  "version": "1.0.0",
+  "description": "Generate a DeepSeek Harness MCP bundle patch from an opencode config",
+  "type": "module",
+  "bin": {
+    "dsh-opencode-mcp-parity": "generate.mjs"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "generate.mjs",
+    "lib.mjs",
+    "sync.config.json",
+    "README.md",
+    "UNLICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "opencode",
+    "mcp",
+    "plugin",
+    "sync"
+  ],
+  "license": "Unlicense",
+  "scripts": {
+    "generate": "node generate.mjs",
+    "test": "node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
